@@ -1,0 +1,15 @@
+https://leetcode.cn/problems/reverse-linked-list/?favorite=2cktkvj
+
+```java
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        ListNode cur=head,prev=null;
+        while(cur!=null){
+            ListNode next=cur.next;
+            cur.next=prev;
+            prev=cur;
+            cur=next;
+        }
+        return prev;
+    }
+}
